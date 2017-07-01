@@ -18,5 +18,13 @@
         "phpunit/phpunit": ">=4.8.34"
     },
     "license": "MIT",
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Wpml\\": "src/"
+        },
+        "classmap": [
+            "models"
+        ]
+    }
 }
