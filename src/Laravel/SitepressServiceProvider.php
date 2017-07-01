@@ -1,9 +1,15 @@
 <?php
 
-namespace Socheatsok78\Wpml;
+namespace Socheatsok78\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * Class SitepressServiceProvider
+ *
+ * @package Socheatsok78\Laravel\SitepressServiceProvider
+ * @author Socheat <https://github.com/socheatsok78>
+ */
 class SitepressServiceProvider extends ServiceProvider
 {
     /**
