@@ -24,7 +24,7 @@ class Translation extends Model
   protected $primaryKey = 'translation_id';
 
   /**
-   * WPMLPost relationship.
+   * Post relationship.
    *
    * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
    */
@@ -38,7 +38,7 @@ class Translation extends Model
    *
    * @param array $models
    *
-   * @return \WPML\TranslationsCollection
+   * @return Wpml\Translation\TranslationsCollection
    */
   public function newCollection(array $models = [])
   {

@@ -20,7 +20,7 @@ class Post extends Corcel
   /**
    * Post Translations relationship.
    *
-   * @return WPML\Core\WPMLPost
+   * @return Wpml\Translation\Translation
    */
   public function wpml()
   {
