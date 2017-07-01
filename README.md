@@ -10,3 +10,7 @@ To install Corcel WPML, just run the following command:
 ```sh
 composer require socheatsok78/wpml
 ```
+
+## Usage
+---
+For documentation please visit [jgrossi/corcel](https://github.com/corcel/corcel#usage) for Corcel's usage and then come back here for how to use wpml plugin.
