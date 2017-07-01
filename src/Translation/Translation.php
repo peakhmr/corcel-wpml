@@ -9,6 +9,7 @@
 namespace Wpml\Translation;
 
 use Illuminate\Database\Eloquent\Model;
+use Wpml\Translation\Translated;
 use Wpml\Post;
 
 class Translation extends Model
@@ -23,6 +24,9 @@ class Translation extends Model
   protected $table = 'icl_translations';
   protected $primaryKey = 'translation_id';
 
+  /** @var array */
+  protected $with = ['translate'];
+
   /**
    * Post relationship.
    *
@@ -33,16 +37,9 @@ class Translation extends Model
     return $this->belongsTo(Post::class);
   }
 
-  /**
-   * Override newCollection() to return a custom collection.
-   *
-   * @param array $models
-   *
-   * @return Wpml\Translation\TranslationsCollection
-   */
-  public function newCollection(array $models = [])
+  public function translate()
   {
-    return new TranslationCollection($models);
+    return $this->hasMany(Translated::class, 'trid', 'trid');
   }
 
 }
