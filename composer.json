@@ -1,0 +1,22 @@
+{
+    "name": "socheatsok78/wpml",
+    "description": "Corcel Multilingual Plugin for WPML [The WordPress Multilingual Plugin]",
+    "homepage": "https://github.com/socheatsok78/wpml",
+    "type": "laravel",
+    "authors": [
+        {
+            "name": "Socheat",
+            "email": "socheatsok78@gmail.com",
+            "homepage": "https://socheat.net/",
+        }
+    ],
+    "require": {
+        "jgrossi/corcel": "^1.4",
+        "corcel/acf": "^0.1.12"
+    },
+    "require-dev": {
+        "phpunit/phpunit": ">=4.8.34"
+    },
+    "license": "MIT",
+    "minimum-stability": "dev"
+}
