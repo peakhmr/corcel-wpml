@@ -9,6 +9,7 @@
 namespace Wpml;
 
 use Corcel\Post as Corcel;
+use Wpml\Translation\Translation;
 
 class Post extends Corcel
 {
@@ -23,7 +24,7 @@ class Post extends Corcel
    */
   public function wpml()
   {
-    return $this->hasMany('Wpml\Translation\Translation', 'element_id');
+    return $this->hasOne(Translation::class, 'element_id');
   }
 
 }
