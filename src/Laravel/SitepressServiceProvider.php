@@ -1,6 +1,6 @@
 <?php
 
-namespace Socheatsok78\Laravel;
+namespace Wpml\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 
