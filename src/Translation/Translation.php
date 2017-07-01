@@ -6,7 +6,9 @@
  * @author Socheat <https://github.com/socheatsok78>
  */
 
-namespace Wpml\Translations;
+namespace Wpml\Translation;
+
+use Illuminate\Database\Eloquent\Model;
 
 class Translation extends Model
 {
