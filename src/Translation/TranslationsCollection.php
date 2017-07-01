@@ -1,6 +1,6 @@
 <?php
 
-namespace Wpml\Translations;
+namespace Wpml\Translation;
 
 use Illuminate\Database\Eloquent\Collection;
 
@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Collection;
  *
  * @author Socheat <https://github.com/socheatsok78>
  */
-class TranslationsCollection extends Collection
+class TranslationCollection extends Collection
 {
    protected $changedKeys = [];
 

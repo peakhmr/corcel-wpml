@@ -8,7 +8,7 @@
 
 namespace Wpml\Translations;
 
-class Translations extends Model
+class Translation extends Model
 {
 
   /**
