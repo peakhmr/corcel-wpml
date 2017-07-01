@@ -20,8 +20,6 @@ composer require socheatsok78/wpml
 > Every time you see Post::method(), if you're using your own Post class (where you set the connection name), like App\Post you should use App\Post::method() and not Post::method(). All the examples are assuming you already know this difference.
 
 ```php
-use Wpml\Post;
-
 // All published posts
 $posts = Post::published()->get();
 $posts = Post::status('publish')->get();
@@ -39,8 +37,6 @@ $posts = Post::hasMeta('acf')->get();
 > Pages are like custom post types. You can use Post::type('page') or the Page class.
 
 ```php
-use Wpml\Page;
-
 // Find a page by slug
 $page = Page::slug('about')->first(); // OR
 $page = Post::type('page')->slug('about')->first();
@@ -52,9 +48,9 @@ For documentation please visit [jgrossi/corcel](https://github.com/corcel/corcel
 ### Translations
 > By using the `$post` object, we can access to the translation created by WPML.
 
-```php
-use Wpml\Page;
+Instead of using `Corcel\Post`, we use `Wpml\Post` to Override few variables.
 
+```php
 // Find a post by id
 $post = Post::find(31);
 
