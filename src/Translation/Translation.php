@@ -29,7 +29,7 @@ class Translation extends Model
    */
   public function newCollection(array $models = [])
   {
-    return new TranslationsCollection($models);
+    return new TranslationCollection($models);
   }
 
 }
