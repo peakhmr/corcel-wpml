@@ -64,4 +64,4 @@ echo $post->wpml->translate->$lang->post_title;
 ```
 
 ### License
-[![license](https://img.shields.io/github/license/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml)
+[![license](https://img.shields.io/github/license/socheatsok78/wpml.svg?style=flat-square)](wpml/blob/master/LICENSE)
