@@ -9,6 +9,7 @@
 namespace Wpml\Translation;
 
 use Illuminate\Database\Eloquent\Model;
+use Wpml\Post;
 
 class Translation extends Model
 {
@@ -21,6 +22,16 @@ class Translation extends Model
   protected $connection = 'wordpress';
   protected $table = 'icl_translations';
   protected $primaryKey = 'translation_id';
+
+  /**
+   * WPMLPost relationship.
+   *
+   * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+   */
+  public function post()
+  {
+    return $this->belongsTo(Post::class);
+  }
 
   /**
    * Override newCollection() to return a custom collection.
