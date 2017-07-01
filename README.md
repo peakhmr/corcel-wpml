@@ -4,6 +4,7 @@
 
 [![GitHub forks](https://img.shields.io/github/forks/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml/network)
 [![GitHub issues](https://img.shields.io/github/issues/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml/issues)
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?style=flat-square)](https://github.com/socheatsok78/wpml)
 
 ## Installation
 > This package is still in development, Installation is not yet working!
