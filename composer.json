@@ -22,9 +22,6 @@
     "autoload": {
         "psr-4": {
             "Wpml\\": "src/"
-        },
-        "classmap": [
-            "models"
-        ]
+        }
     }
 }
