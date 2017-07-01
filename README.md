@@ -6,12 +6,14 @@
 [![GitHub release](https://img.shields.io/github/release/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml/releases)
 
 ## Installation
-> This package is still in development, Installation is not yet working!
+> This package is still in development
 
 To install Corcel WPML, just run the following command:
 ```sh
 composer require socheatsok78/wpml
 ```
+[![Packagist](https://img.shields.io/packagist/dt/socheatsok78/wpml.svg?style=flat-square)](https://packagist.org/packages/socheatsok78/wpml)
+
 
 ## Usage
 ---
@@ -60,3 +62,6 @@ $lang = 'zh';
 
 echo $post->wpml->translate->$lang->post_title;
 ```
+
+### License
+[![license](https://img.shields.io/github/license/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml)
