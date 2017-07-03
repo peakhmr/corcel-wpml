@@ -25,7 +25,7 @@ class Translation extends Model
   protected $primaryKey = 'translation_id';
 
   /** @var array */
-  protected $with = ['translate'];
+  // protected $with = ['translate'];
 
   /**
    * Post relationship.
@@ -37,9 +37,21 @@ class Translation extends Model
     return $this->belongsTo(Post::class);
   }
 
-  public function translate()
+  // public function translate()
+  // {
+  //   return $this->hasMany(Translated::class, 'trid', 'trid');
+  // }
+
+  /**
+   * Override newCollection() to return a custom collection.
+   *
+   * @param array $models
+   *
+   * @return Wpml\Translation\TranslationsCollection
+   */
+  public function newCollection(array $models = [])
   {
-    return $this->hasMany(Translated::class, 'trid', 'trid');
+    return new TranslationCollection($models);
   }
 
 }

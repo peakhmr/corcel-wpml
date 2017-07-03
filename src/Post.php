@@ -14,19 +14,6 @@ use Wpml\Translation\Translation;
 class Post extends Corcel
 {
 
-  /** @var array */
-  protected $with = ['meta', 'wpml'];
-
-  /**
-   * Post Translations relationship.
-   *
-   * @return Wpml\Translation\Translation
-   */
-  public function wpml()
-  {
-    return $this->hasOne(Translation::class, 'element_id');
-  }
-
   /**
    * The accessors to append to the model's array form.
    *
@@ -68,6 +55,24 @@ class Post extends Corcel
     public function getLanguageAttribute()
     {
       return $this->wpml->language_code;
+    }
+
+
+    /**
+     * Scope a query for translated posts.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeTranslation()
+    {
+      // Find Translation Group ID
+      $element = Translation::where('element_id', $this->ID)->first();
+
+      // Find Translation collection
+      $translations = Translation::where('trid', $element->trid)->get();
+
+      return $translations;
     }
 
 }

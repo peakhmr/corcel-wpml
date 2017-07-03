@@ -53,14 +53,25 @@ For documentation please visit [jgrossi/corcel](https://github.com/corcel/corcel
 Instead of using `Corcel\Post`, we use `Wpml\Post` to Override few variables.
 
 ```php
-// Find a post by id
-$post = Post::find(31);
+// Find a translation collection by post id
+$post = Post::find(31)->translation();
 
-// Language variable
-$lang = 'en'; // OR
-$lang = 'zh';
-
-echo $post->wpml->translate->$lang->post_title;
+TranslationCollection {#1855 ▼
+  #changedKeys: []
+  #items: array:2 [▼
+    0 => Translation {
+      #original: array:6 [▼
+        "translation_id" => 38
+        "element_type" => "post_page"
+        "element_id" => 6
+        "trid" => 19
+        "language_code" => "en"
+        "source_language_code" => null
+      ]
+    }
+    1 => Translation {#1853 ▶}
+  ]
+}
 ```
 
 ### Not working
