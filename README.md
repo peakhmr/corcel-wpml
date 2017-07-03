@@ -96,7 +96,7 @@ Page {#1847 ▼
     "post_author" => 1
     "post_date" => "2017-06-12 04:49:06"
     "post_date_gmt" => "2017-06-12 04:49:06"
-    "post_content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "post_content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod."
     "post_title" => "Lorem ipsum dolor sit amet"
     ...
   ]
