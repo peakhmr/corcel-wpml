@@ -53,10 +53,11 @@ For documentation please visit [jgrossi/corcel](https://github.com/corcel/corcel
 Instead of using `Corcel\Post`, we use `Wpml\Post` to Override few variables. The plugin will look for `wp_posts.ID` in `icl_translations.element_id` and return a collection of `icl_translations.trid`.
 
 ```php
-// Find a translation collection by post id
+// Find a translation collection by post id or slug
 $post = Post::find(31)->translation(); \\ OR
 $post = Post::slug('about')->translation();
 
+\\ Result
 TranslationCollection {#1855 ▼
   #changedKeys: []
   #items: array:2 [▼
@@ -71,6 +72,33 @@ TranslationCollection {#1855 ▼
       ]
     }
     1 => Translation {#1853 ▶}
+  ]
+}
+```
+
+### Translate Post or Page
+If you want to get the translated post object, use `translate()` scope and passing the `icl_translations.language_code` as parameter. This will return `Corcel\Post` object as expected.
+
+```php
+// Find a translation collection by post id or slug
+
+$lang = 'en'; \\ OR
+$lang = config('app.locale');
+
+$post = Post::find(31)->translate($lang); \\ OR
+$post = Post::slug('about')->translate($lang);
+
+\\ Result
+Page {#1847 ▼
+  #postType: "page"
+  #original: array:23 [▼
+    "ID" => 6
+    "post_author" => 1
+    "post_date" => "2017-06-12 04:49:06"
+    "post_date_gmt" => "2017-06-12 04:49:06"
+    "post_content" => "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "post_title" => "Lorem ipsum dolor sit amet"
+    ...
   ]
 }
 ```

@@ -75,4 +75,9 @@ class Post extends Corcel
       return $translations;
     }
 
+    public function scopeTranslate($query, $lang = '')
+    {
+      # code...
+    }
+
 }
