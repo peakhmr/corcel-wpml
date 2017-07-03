@@ -85,7 +85,6 @@ If you want to get the translated post object, use `translate()` scope and passi
 $lang = 'en'; \\ OR
 $lang = config('app.locale');
 
-$post = Post::find(31)->translate($lang); \\ OR
 $post = Post::slug('about')->translate($lang);
 
 \\ Result

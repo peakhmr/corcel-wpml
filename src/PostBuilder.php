@@ -14,7 +14,7 @@ use Wpml\Translation\Translation;
 class PostBuilder extends Builder
 {
 
-  public function language($lang)
+  public function translate($lang)
   {
     // Getting current post object
     $origin = $this->first();
@@ -31,9 +31,7 @@ class PostBuilder extends Builder
     // Getting Post Object
     $post =  Post::find($translations->element_id);
 
-    return collect([
-      $post
-    ]);
+    return collect([ $post ]);
   }
 
 }
