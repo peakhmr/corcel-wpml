@@ -70,9 +70,7 @@ class Post extends Corcel
       $element = Translation::where('element_id', $this->ID)->first();
 
       // Find Translation collection
-      $translations = Translation::where('trid', $element->trid)->get();
-
-      return $translations;
+      return Translation::where('trid', $element->trid)->get();
     }
 
     public function scopeTranslate($query, $lang = '')
@@ -90,6 +88,29 @@ class Post extends Corcel
       $post =  Post::find($translations->element_id);
 
       return $post;
+    }
+
+    /**
+     * Overriding newQuery() to the custom PostBuilder with some interesting methods.
+     *
+     * @param bool $excludeDeleted
+     *
+     * @return Wpml\PostBuilder
+     */
+    public function newQuery($excludeDeleted = true)
+    {
+        $builder = new PostBuilder($this->newBaseQueryBuilder());
+        $builder->setModel($this)->with($this->with);
+        // disabled the default orderBy because else Post::all()->orderBy(..)
+        // is not working properly anymore.
+        // $builder->orderBy('post_date', 'desc');
+        if (isset($this->postType) and $this->postType) {
+            $builder->type($this->postType);
+        }
+        if ($excludeDeleted and $this->softDelete) {
+            $builder->whereNull($this->getQualifiedDeletedAtColumn());
+        }
+        return $builder;
     }
 
 }
