@@ -24,9 +24,6 @@ class Translation extends Model
   protected $table = 'icl_translations';
   protected $primaryKey = 'translation_id';
 
-  /** @var array */
-  // protected $with = ['translate'];
-
   /**
    * Post relationship.
    *
@@ -36,11 +33,6 @@ class Translation extends Model
   {
     return $this->belongsTo(Post::class);
   }
-
-  // public function translate()
-  // {
-  //   return $this->hasMany(Translated::class, 'trid', 'trid');
-  // }
 
   /**
    * Override newCollection() to return a custom collection.
