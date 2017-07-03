@@ -50,11 +50,12 @@ For documentation please visit [jgrossi/corcel](https://github.com/corcel/corcel
 ### Translations
 > By using the `$post` object, we can access to the translation created by WPML.
 
-Instead of using `Corcel\Post`, we use `Wpml\Post` to Override few variables.
+Instead of using `Corcel\Post`, we use `Wpml\Post` to Override few variables. The plugin will look for `wp_posts.ID` in `icl_translations.element_id` and return a collection of `icl_translations.trid`.
 
 ```php
 // Find a translation collection by post id
-$post = Post::find(31)->translation();
+$post = Post::find(31)->translation(); \\ OR
+$post = Post::slug('about')->translation();
 
 TranslationCollection {#1855 ▼
   #changedKeys: []
@@ -63,7 +64,7 @@ TranslationCollection {#1855 ▼
       #original: array:6 [▼
         "translation_id" => 38
         "element_type" => "post_page"
-        "element_id" => 6
+        "element_id" => 31
         "trid" => 19
         "language_code" => "en"
         "source_language_code" => null
