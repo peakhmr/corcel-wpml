@@ -86,7 +86,7 @@ class Post extends Corcel
 
       // Getting Post Object
       $post =  Post::find($translations->element_id);
-
+      // dump(['scopeTranslation ' => $element]);
       return $post;
     }
 
@@ -110,6 +110,7 @@ class Post extends Corcel
         if ($excludeDeleted and $this->softDelete) {
             $builder->whereNull($this->getQualifiedDeletedAtColumn());
         }
+        // dump(['newQuery ' => $this]);
         return $builder;
     }
 
