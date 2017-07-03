@@ -23,6 +23,7 @@ install:
   - cd vendor/jgrossi/corcel
   - mysql -u root -e "create database wpml;"
   - mysql -u root wpml < tests/config/database.sql
+  - composer install
   - mkdir -p build/logs
   - phpunit
 
