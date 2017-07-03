@@ -2,7 +2,7 @@
 
 > This package allows you to use Corcel WordPress plugin with The WordPress Multilingual Plugin that allow you to easily build multilingual sites and run them. It’s powerful enough for corporate sites, yet simple for blogs.
 
-[![Build Status](https://travis-ci.org/socheatsok78/wpml.svg?branch=master)](https://travis-ci.org/socheatsok78/wpml)
+[![Travis branch](https://img.shields.io/travis/socheatsok78/wpml/master.svg?style=flat-square)](https://travis-ci.org/socheatsok78/wpml)
 [![GitHub issues](https://img.shields.io/github/issues/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml/issues)
 
 ## Installation
