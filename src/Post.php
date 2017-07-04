@@ -14,6 +14,18 @@ use Wpml\Translation\Translation;
 class Post extends Corcel
 {
 
+  protected $with = ['meta', 'wpml'];
+
+  /**
+   * Translation data relationship.
+   *
+   * @return Corcel\PostMetaCollection
+   */
+  public function wpml()
+  {
+      return $this->hasOne(Translation::class, 'element_id');
+  }
+
   /**
    * The accessors to append to the model's array form.
    *
