@@ -73,23 +73,6 @@ class Post extends Corcel
       return Translation::where('trid', $element->trid)->get();
     }
 
-    // public function scopeTranslate($query, $lang = '')
-    // {
-    //   // Find Translation Group ID
-    //   $element = Translation::where('element_id', $this->ID)->first();
-    //
-    //   // Find Translation collection
-    //   $translations = Translation::where('trid', $element->trid)->where('language_code', $lang)->first();
-    //   if (empty($translations)) {
-    //     $translations = Translation::where('trid', $element->trid)->where('source_language_code', null)->first();
-    //   }
-    //
-    //   // Getting Post Object
-    //   $post =  Post::find($translations->element_id);
-    //   // dump(['scopeTranslation ' => $element]);
-    //   return $post;
-    // }
-
     /**
      * Overriding newQuery() to the custom PostBuilder with some interesting methods.
      *
