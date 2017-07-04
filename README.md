@@ -107,7 +107,7 @@ Page {#1847 ▼
 
 Add the follwing PHP script to your WordPress theme's `function.php`. This script will append a button `Transfer Advanced Custom Field Accessor Keys` to the `Multilingual Content Seup` section. This action button will toggle all `_field_key` as `copy` for you.
 
-![Multilingual Content Seup](screens/Multilingual Content Seup.png)
+![Multilingual Content Seup](screens/multilingual_content_seup.png)
 
 ```php
   function acf_admin_script()
