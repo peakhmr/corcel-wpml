@@ -23,5 +23,9 @@
         "psr-4": {
             "Wpml\\": "src/"
         }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
     }
 }
