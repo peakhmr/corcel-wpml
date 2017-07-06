@@ -156,3 +156,4 @@ Add the follwing PHP script to your WordPress theme's `function.php`. This scrip
 
 ### License
 [![license](https://img.shields.io/github/license/socheatsok78/wpml.svg?style=flat-square)](LICENSE)
+<!-- [![Packagist](https://img.shields.io/packagist/v/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml/releases) -->
