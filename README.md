@@ -2,18 +2,18 @@
 
 > This package allows you to use Corcel WordPress plugin with The WordPress Multilingual Plugin that allow you to easily build multilingual sites and run them. It’s powerful enough for corporate sites, yet simple for blogs.
 
-[![Travis branch](https://img.shields.io/travis/socheatsok78/wpml/master.svg?style=flat-square)](https://travis-ci.org/socheatsok78/wpml)
-[![GitHub issues](https://img.shields.io/github/issues/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml/issues)
+[![Travis branch](https://img.shields.io/travis/peakhmr/wpml/master.svg?style=flat-square)](https://travis-ci.org/peakhmr/wpml)
+[![GitHub issues](https://img.shields.io/github/issues/peakhmr/wpml.svg?style=flat-square)](https://github.com/peakhmr/wpml/issues)
 
 ## Installation
 > This package is still in development
 
 To install Corcel WPML, just run the following command:
 ```sh
-composer require socheatsok78/wpml
+composer require peakhmr/wpml
 ```
-[![Packagist](https://img.shields.io/packagist/dt/socheatsok78/wpml.svg?style=flat-square)](https://packagist.org/packages/socheatsok78/wpml)
-[![GitHub release](https://img.shields.io/github/release/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml/releases)
+[![Packagist](https://img.shields.io/packagist/dt/peakhmr/wpml.svg?style=flat-square)](https://packagist.org/packages/peakhmr/wpml)
+[![GitHub release](https://img.shields.io/github/release/peakhmr/wpml.svg?style=flat-square)](https://github.com/peakhmr/wpml/releases)
 
 
 ## Usage
@@ -119,7 +119,6 @@ Add the follwing PHP script to your WordPress theme's `function.php`. This scrip
 
       /**
       * Advanced Custom Field Accessor key copy tools
-      * @author Socheat <socheatsok78@gmail.com>
       */
 
       $(document).ready(function() {
@@ -155,5 +154,5 @@ Add the follwing PHP script to your WordPress theme's `function.php`. This scrip
 ```
 
 ### License
-[![license](https://img.shields.io/github/license/socheatsok78/wpml.svg?style=flat-square)](LICENSE)
-<!-- [![Packagist](https://img.shields.io/packagist/v/socheatsok78/wpml.svg?style=flat-square)](https://github.com/socheatsok78/wpml/releases) -->
+[![license](https://img.shields.io/github/license/peakhmr/wpml.svg?style=flat-square)](LICENSE)
+<!-- [![Packagist](https://img.shields.io/packagist/v/peakhmr/wpml.svg?style=flat-square)](https://github.com/peakhmr/wpml/releases) -->
