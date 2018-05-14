@@ -8,30 +8,30 @@
 
 namespace Wpml;
 
-use Corcel\Post as Corcel;
+use Corcel\Model\Post as Corcel;
 use Wpml\Translation\Translation;
 
 class Post extends Corcel
 {
 
-  protected $with = ['meta', 'wpml'];
+    protected $with = ['meta', 'wpml'];
 
   /**
    * Translation data relationship.
    *
    * @return Corcel\PostMetaCollection
    */
-  public function wpml()
-  {
-      return $this->hasOne(Translation::class, 'element_id');
-  }
+    public function wpml()
+    {
+        return $this->hasOne(Translation::class, 'element_id');
+    }
 
   /**
    * The accessors to append to the model's array form.
    *
    * @var array
    */
-  protected $appends = [
+    protected $appends = [
     'title',
     'slug',
     'content',
@@ -66,7 +66,7 @@ class Post extends Corcel
      */
     public function getLanguageAttribute()
     {
-      return $this->wpml->language_code;
+        return $this->wpml->language_code;
     }
 
 
@@ -79,10 +79,10 @@ class Post extends Corcel
     public function scopeTranslation()
     {
       // Find Translation Group ID
-      $element = Translation::where('element_id', $this->ID)->first();
+        $element = Translation::where('element_id', $this->ID)->first();
 
       // Find Translation collection
-      return Translation::where('trid', $element->trid)->get();
+        return Translation::where('trid', $element->trid)->get();
     }
 
     /**
@@ -108,5 +108,4 @@ class Post extends Corcel
         // dump(['newQuery ' => $this]);
         return $builder;
     }
-
 }
