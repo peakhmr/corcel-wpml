@@ -7,12 +7,6 @@ php:
 
 dist: trusty
 sudo: required
-addons:
-  apt:
-    packages:
-    - mysql-server-5.6
-    - mysql-client-core-5.6
-    - mysql-client-5.6
 
 before_install:
   - composer self-update
@@ -21,8 +15,6 @@ before_install:
 install:
   - echo 'Testing Corcel Modules'
   - cd vendor/jgrossi/corcel
-  - mysql -u root -e "create database corcel;"
-  - mysql -u root corcel < tests/config/database.sql
   - composer install
   - mkdir -p build/logs
   - phpunit
