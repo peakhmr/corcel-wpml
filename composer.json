@@ -1,6 +1,6 @@
 {
     "name": "peakhmr/wpml",
-    "description": "Corcel Multilingual Plugin for WPML [The WordPress Multilingual Plugin]",
+    "description": "The WordPress Multilingual [WPML] Plugin for Corcel/Laravel",
     "homepage": "https://github.com/peakhmr/wpml",
     "type": "laravel",
     "authors": [
