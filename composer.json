@@ -11,14 +11,13 @@
         }
     ],
     "require": {
-        "jgrossi/corcel": "*",
+        "jgrossi/corcel": "v2.6.*",
         "corcel/acf": "*"
     },
     "require-dev": {
         "phpunit/phpunit": ">=4.8.34"
     },
     "license": "MIT",
-    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Wpml\\": "src/"
