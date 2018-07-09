@@ -1,9 +1,12 @@
-# Corcel WPML
+# The Laravel WordPress Multilingual Plugin (Powered by @corcel/corcel)
 
 > This package allows you to use Corcel WordPress plugin with The WordPress Multilingual Plugin that allow you to easily build multilingual sites and run them. It’s powerful enough for corporate sites, yet simple for blogs.
 
 [![Travis branch](https://img.shields.io/travis/peakhmr/wpml/master.svg?style=flat-square)](https://travis-ci.org/peakhmr/wpml)
 [![GitHub issues](https://img.shields.io/github/issues/peakhmr/wpml.svg?style=flat-square)](https://github.com/peakhmr/wpml/issues)
+
+## <span style="color: #EE6352;">NOTE:</span>
+> @peakhmr/wpml is currently under new development. The future version will use a completely different approch by using `trait` instead of extending @corcel/corcel models.
 
 ## Installation
 > This package is still in development
